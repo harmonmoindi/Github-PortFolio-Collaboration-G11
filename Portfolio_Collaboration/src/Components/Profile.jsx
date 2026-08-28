@@ -35,3 +35,22 @@ const teamProfiles = [
     email: "mailto:oketch@example.com"
   }
 ];
+
+
+export default function Profile() {
+  return (
+    <section className="min-h-screen bg-[#121212] text-[#e0e0e0] px-8 py-12 font-sans">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="flex items-center gap-3 mb-12">
+          <span className="text-[#f59e0b] font-mono text-sm">03</span>
+          <h1 className="text-3xl font-bold text-white">Profile</h1>
+        </div>
+
+        {/* 4-Card Profile Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {teamProfiles.map((member, index) => (
+            <div
+              key={index}
+              className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:border-[#333] transition-all"
+            >
