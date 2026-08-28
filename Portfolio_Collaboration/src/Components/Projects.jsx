@@ -89,3 +89,25 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
+              {/* Projects Cards */}
+              {member.projects.map((project, pIndex) => (
+                <div
+                  key={pIndex}
+                  className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-lg overflow-hidden flex flex-col"
+                >
+                  <div className="h-48 bg-[#252525] flex items-center justify-center text-[#777] font-mono text-xs uppercase tracking-wider">
+                    SCREENSHOT – PROJECT {pIndex + 1}
+                  </div>
+                  <div className="p-4 bg-[#181818]">
+                    <h4 className="font-bold text-white text-sm mb-1">{project.title}</h4>
+                    <p className="text-[#888] text-xs">{project.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
