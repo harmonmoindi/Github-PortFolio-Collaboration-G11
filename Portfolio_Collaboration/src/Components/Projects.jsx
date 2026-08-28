@@ -15,3 +15,17 @@ const teamProjects = [
       }
     ]
   },
+  {
+    name: "Harmon Moindi",
+    githubUrl: "https://github.com/harmonmoindi", // Replace with actual URL
+    projects: [
+      {
+        title: "Project Title One",
+        description: "Short one-line description of the project goes here."
+      },
+      {
+        title: "Project Title Two",
+        description: "Short one-line description of the project goes here."
+      }
+    ]
+  },
