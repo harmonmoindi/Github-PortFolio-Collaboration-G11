@@ -81,3 +81,28 @@ export default function Profile() {
                 >
                   <FaGithub size={16} />
                 </a>
+
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  title="Portfolio Link"
+                >
+                  <FaLink size={14} />
+                </a>
+                <a
+                  href={member.email}
+                  className="hover:text-white transition-colors"
+                  title="Send Email"
+                >
+                  <FaEnvelope size={15} />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
