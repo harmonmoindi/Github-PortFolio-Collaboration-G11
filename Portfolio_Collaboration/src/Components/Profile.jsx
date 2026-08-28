@@ -60,3 +60,12 @@ export default function Profile() {
               >
                 {member.name.charAt(0)}
               </div>
+
+              {/* Info */}
+              <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+              <p className="text-[#f59e0b] text-xs font-mono font-medium mb-3">
+                {member.role}
+              </p>
+              <p className="text-[#9ca3af] text-xs leading-relaxed mb-6 flex-grow">
+                {member.bio}
+              </p>
