@@ -69,3 +69,15 @@ export default function Profile() {
               <p className="text-[#9ca3af] text-xs leading-relaxed mb-6 flex-grow">
                 {member.bio}
               </p>
+
+              {/* Action Icons */}
+              <div className="flex items-center gap-4 text-[#888]">
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                  title="GitHub Profile"
+                >
+                  <FaGithub size={16} />
+                </a>
