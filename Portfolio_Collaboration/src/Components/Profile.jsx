@@ -54,3 +54,9 @@ export default function Profile() {
               key={index}
               className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:border-[#333] transition-all"
             >
+                {/* Avatar Icon */}
+              <div
+                className={`w-20 h-20 rounded-full ${member.avatarBg} flex items-center justify-center text-white font-bold text-2xl mb-4`}
+              >
+                {member.name.charAt(0)}
+              </div>
