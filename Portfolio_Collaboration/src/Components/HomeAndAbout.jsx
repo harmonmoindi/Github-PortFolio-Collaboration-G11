@@ -30,12 +30,15 @@ const team = [
   },
 ];
 
-export default function Home() {
+export default function HomeAndAbout() {
   const styles = {
     home: {
-      background: "#181b23",
-      minHeight: "100vh",
-      padding: "70px 19%",
+      background: "#12141a",
+      minHeight: "92vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      padding: "0 19%",
       color: "#eee",
     },
     small: {
@@ -58,8 +61,7 @@ export default function Home() {
       background: "#f5ae42",
       border: "none",
       padding: "16px 25px",
-      marginTop: "25px",
-      boxShadow: "0 0 20px #f5ae42",
+      marginTop: "50px",
       cursor: "pointer",
     },
   };
@@ -67,13 +69,13 @@ export default function Home() {
   return (
     <>
       {/* HOME SECTION */}
-      <main style={styles.home}>
+      <main id="hero" style={styles.home}>
         <small style={styles.small}>▪ TEAM MANIFEST / G11</small>
 
         <h1 style={styles.h1}>Hello, we're Software Engineers,</h1>
 
         <p style={styles.names}>
-         [Barbara Oktoi ] [Harmmon Moindi] [Frank Mwaura] [Oketch Nathan] 
+          [Barbara Oktoi ] [Harmmon Moindi] [Frank Mwaura] [Oketch Nathan]
         </p>
 
         <p style={styles.text}>Welcome to our portfolio.</p>
@@ -94,9 +96,9 @@ export default function Home() {
       <section
         id="about"
         style={{
-          background: "#181b23",
+          background: "#12141a",
           color: "#ccc",
-          padding: "60px 19%",
+          padding: "20px 19% 60px",
         }}
       >
         <h2 style={{ color: "#fff" }}>
