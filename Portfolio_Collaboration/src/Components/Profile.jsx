@@ -24,7 +24,7 @@ const teamProfiles = [
     role: "Software Engineer",
     bio: "Let's connect — always up for a conversation about Python or JS.",
     github: "https://github.com/coodewizard31",
-    email: "mailto:frank@example.com",
+    email: "frankwamuyu@gmail.com",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   },
   {
@@ -32,7 +32,7 @@ const teamProfiles = [
     role: "Software Engineer",
     bio: "Say hello — interested in frontend/backend collab opportunities.",
     github: "https://github.com/nobuyanzi07-cell",
-    email: "mailto:oketch@example.com",
+    email: "nobuyanzi07@gmail.com",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   }
 ];
@@ -76,11 +76,11 @@ export default function Profile() {
             <p style={{ margin: '0 0 1.5rem 0', color: '#9ca3af', fontSize: '0.85rem', lineHeight: '1.4' }}>{member.bio}</p>
 
             {/* Social Icons */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem' }}>
-              <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af' }}><FaGithub size={16} /></a>
-              <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af' }}><FaLink size={16} /></a>
-              <a href={member.email} style={{ color: '#9ca3af' }}><FaEnvelope size={16} /></a>
-            </div>
+<div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem' }}>
+  <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af' }}><FaGithub size={16} /></a>
+  <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af' }}><FaLink size={16} /></a>
+  <a href={`mailto:${member.email}`} style={{ color: '#9ca3af' }}><FaEnvelope size={16} /></a>
+</div>
           </div>
         ))}
       </div>

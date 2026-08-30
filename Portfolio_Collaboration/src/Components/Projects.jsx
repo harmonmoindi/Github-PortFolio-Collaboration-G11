@@ -45,10 +45,10 @@ const teamProjects = [
     githubUrl: "https://github.com/nobuyanzi07-cell",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      { title: "Project Title One", description: "Short one-line description of the project goes here.",
+      { title: "PrimeFlix", description: "A movie rating app.",
         image: "/project 1 Nathan.jpeg"
        },
-      { title: "Project Title Two", description: "Short one-line description of the project goes here.",
+      { title: "FlatBooks", description: "A bookstore website.",
         image: "/project 2 Nathan.jpeg"
        }
     ]
