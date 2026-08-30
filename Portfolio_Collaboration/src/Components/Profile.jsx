@@ -6,8 +6,8 @@ const teamProfiles = [
     name: "Barbara Oktoi",
     role: "Software Engineer",
     bio: "Open to connecting — always happy to talk React and frontend craft.",
-    github: "https://github.com/barbaraoktoi",
-    email: "mailto:barbara@example.com",
+    github: "https://github.com/Barb24-cpu",
+    email: "oktoibarb@gmail.com",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     avatarBg: "#f4a261"
   },
@@ -16,14 +16,14 @@ const teamProfiles = [
     role: "Software Engineer",
     bio: "Building in public — reach out about full-stack work or collabs.",
     github: "https://github.com/harmonmoindi",
-    email: "mailto:harmon@example.com",
+    email: "harmonmoindi@gmail.com",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   },
   {
     name: "Frank Mwaura",
     role: "Software Engineer",
     bio: "Let's connect — always up for a conversation about Python or JS.",
-    github: "https://github.com/frankmwaura",
+    github: "https://github.com/coodewizard31",
     email: "mailto:frank@example.com",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   },
@@ -31,7 +31,7 @@ const teamProfiles = [
     name: "Oketch Nathan",
     role: "Software Engineer",
     bio: "Say hello — interested in frontend/backend collab opportunities.",
-    github: "https://github.com/oketchnathan",
+    github: "https://github.com/nobuyanzi07-cell",
     email: "mailto:oketch@example.com",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   }

@@ -3,11 +3,15 @@ import React from 'react';
 const teamProjects = [
   {
     name: "Barbara Oktoi",
-    githubUrl: "https://github.com/barbaraoktoi",
+    githubUrl: "https://github.com/Barb24-cpu",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      { title: "Project Title One", description: "Short one-line description of the project goes here." },
-      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
+      { title: "Automobile Company", description: "Sells different types of cars.",
+        image: "/project 1 Barbara.png"
+       },
+      { title: "SokoPlus", description: "A shopping platform from trusted independent sellers.",
+        image: "/project 2 Barbara.png"
+       }
     ]
   },
   {
@@ -15,26 +19,38 @@ const teamProjects = [
     githubUrl: "https://github.com/harmonmoindi",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      { title: "Project Title One", description: "Short one-line description of the project goes here." },
-      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
+      { title: "CV Center", description: "A place you can make & download your CV (CV Center).",
+        image: "/Project 1 Harmon.jpg"
+       },
+      { title: "Trading Performance Tracker", description: "A web application used to help you keep track and improve your trading.",
+        image: "/Project 2 Harmon Trading performance tracker.jpeg"
+       }
     ]
   },
   {
     name: "Frank Mwaura",
-    githubUrl: "https://github.com/frankmwaura",
+    githubUrl: "https://github.com/coodewizard31",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      { title: "Project Title One", description: "Short one-line description of the project goes here." },
-      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
+      { title: "Akan Generator", description: "A Ghanian naming system by gender & days of the week.",
+        image: "/project 1 Frank.jpeg"
+       },
+      { title: "Mediflow", description: "A hospital medical traffic system.",
+        image: "/project 2 Frank.jpeg"
+       }
     ]
   },
   {
     name: "Oketch Nathan",
-    githubUrl: "https://github.com/oketchnathan",
+    githubUrl: "https://github.com/nobuyanzi07-cell",
     avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      { title: "Project Title One", description: "Short one-line description of the project goes here." },
-      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
+      { title: "Project Title One", description: "Short one-line description of the project goes here.",
+        image: "/project 1 Nathan.jpeg"
+       },
+      { title: "Project Title Two", description: "Short one-line description of the project goes here.",
+        image: "/project 2 Nathan.jpeg"
+       }
     ]
   }
 ];
@@ -82,21 +98,36 @@ export default function Projects() {
               {member.projects.map((project, pIndex) => (
                 <div key={pIndex} style={{ backgroundColor: '#262626', borderRadius: '12px', padding: '1.25rem', border: '1px solid #333' }}>
                   {/* Screenshot Placeholder */}
-                  <div style={{
-                    backgroundColor: '#383d48',
-                    borderRadius: '8px',
-                    height: '180px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: '#9ca3af',
-                    fontSize: '0.75rem',
-                    letterSpacing: '1px',
-                    fontWeight: 'bold',
-                    marginBottom: '1rem'
-                  }}>
-                    SCREENSHOT – PROJECT {pIndex + 1}
-                  </div>
+                  {project.image ? (
+  <img 
+    src={project.image} 
+    alt={project.title}
+    style={{
+      width: '100%',
+      height: '180px',
+      objectFit: 'cover',
+      borderRadius: '8px',
+      marginBottom: '1rem',
+      display: 'block'
+    }}
+  />
+) : (
+  <div style={{
+    backgroundColor: '#383d48',
+    borderRadius: '8px',
+    height: '180px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: '#9ca3af',
+    fontSize: '0.75rem',
+    letterSpacing: '1px',
+    fontWeight: 'bold',
+    marginBottom: '1rem'
+  }}>
+    SCREENSHOT – PROJECT {pIndex + 1}
+  </div>
+)}
                   <h4 style={{ margin: '0 0 0.4rem 0', color: '#ffffff', fontSize: '1rem', fontWeight: 'bold' }}>{project.title}</h4>
                   <p style={{ margin: 0, color: '#9ca3af', fontSize: '0.85rem', lineHeight: '1.4' }}>{project.description}</p>
                 </div>
