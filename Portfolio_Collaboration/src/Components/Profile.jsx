@@ -5,103 +5,84 @@ const teamProfiles = [
   {
     name: "Barbara Oktoi",
     role: "Software Engineer",
-    bio: "Passionate about crafting intuitive user interfaces and modern web applications.",
-    avatarBg: "bg-[#d97706]",
+    bio: "Open to connecting — always happy to talk React and frontend craft.",
     github: "https://github.com/barbaraoktoi",
-    email: "mailto:barbara@example.com"
+    email: "mailto:barbara@example.com",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
+    avatarBg: "#f4a261"
   },
   {
     name: "Harmon Moindi",
     role: "Software Engineer",
-    bio: "Dedicated to scalable web solutions, clean architecture, and seamless integration.",
-    avatarBg: "bg-[#2563eb]",
+    bio: "Building in public — reach out about full-stack work or collabs.",
     github: "https://github.com/harmonmoindi",
-    email: "mailto:harmon@example.com"
+    email: "mailto:harmon@example.com",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   },
   {
     name: "Frank Mwaura",
     role: "Software Engineer",
-    bio: "Focused on reliable backend systems, performant APIs, and developer tools.",
-    avatarBg: "bg-[#16a34a]",
+    bio: "Let's connect — always up for a conversation about Python or JS.",
     github: "https://github.com/frankmwaura",
-    email: "mailto:frank@example.com"
+    email: "mailto:frank@example.com",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   },
   {
     name: "Oketch Nathan",
     role: "Software Engineer",
-    bio: "Driven by technical innovation, robust software design, and teamwork.",
-    avatarBg: "bg-[#ea580c]",
+    bio: "Say hello — interested in frontend/backend collab opportunities.",
     github: "https://github.com/oketchnathan",
-    email: "mailto:oketch@example.com"
+    email: "mailto:oketch@example.com",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg"
   }
 ];
 
-
 export default function Profile() {
   return (
-    <section className="min-h-screen bg-[#121212] text-[#e0e0e0] px-8 py-12 font-sans">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="flex items-center gap-3 mb-12">
-          <span className="text-[#f59e0b] font-mono text-sm">03</span>
-          <h1 className="text-3xl font-bold text-white">Profile</h1>
-        </div>
+    <section id="profile" style={{ paddingTop: '2rem' }}>
+      <h2 style={{ fontSize: '2.2rem', fontWeight: 'bold', marginBottom: '2.5rem', color: '#ffffff' }}>
+        <span style={{ color: '#d97706', marginRight: '0.75rem', fontSize: '1.5rem' }}>03</span>
+        Profile
+      </h2>
 
-        {/* 4-Card Profile Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {teamProfiles.map((member, index) => (
-            <div
-              key={index}
-              className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-xl p-6 flex flex-col items-center text-center shadow-lg hover:border-[#333] transition-all"
-            >
-                {/* Avatar Icon */}
-              <div
-                className={`w-20 h-20 rounded-full ${member.avatarBg} flex items-center justify-center text-white font-bold text-2xl mb-4`}
-              >
-                {member.name.charAt(0)}
-              </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem' }}>
+        {teamProfiles.map((member, index) => (
+          <div key={index} style={{ backgroundColor: '#262626', borderRadius: '12px', padding: '2rem 1.5rem', textAlign: 'center', border: '1px solid #333' }}>
+            {/* Color Avatar */}
+            {member.avatarImg ? (
+  <img 
+    src={member.avatarImg} 
+    alt={member.name}
+    style={{
+      width: '80px',
+      height: '80px',
+      borderRadius: '50%',
+      objectFit: 'cover',
+      margin: '0 auto 1.25rem auto',
+      display: 'block'
+    }}
+  />
+) : (
+  <div style={{
+    width: '80px',
+    height: '80px',
+    borderRadius: '50%',
+    backgroundColor: member.avatarBg,
+    margin: '0 auto 1.25rem auto'
+  }} />
+)}
+            <h3 style={{ margin: '0 0 0.3rem 0', fontSize: '1.1rem', color: '#ffffff', fontWeight: 'bold' }}>{member.name}</h3>
+            <p style={{ margin: '0 0 1rem 0', color: '#d97706', fontSize: '0.85rem', fontWeight: 'bold' }}>{member.role}</p>
+            <p style={{ margin: '0 0 1.5rem 0', color: '#9ca3af', fontSize: '0.85rem', lineHeight: '1.4' }}>{member.bio}</p>
 
-              {/* Info */}
-              <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-              <p className="text-[#f59e0b] text-xs font-mono font-medium mb-3">
-                {member.role}
-              </p>
-              <p className="text-[#9ca3af] text-xs leading-relaxed mb-6 flex-grow">
-                {member.bio}
-              </p>
-
-              {/* Action Icons */}
-              <div className="flex items-center gap-4 text-[#888]">
-                <a
-                  href={member.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                  title="GitHub Profile"
-                >
-                  <FaGithub size={16} />
-                </a>
-
-                <a
-                  href={member.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                  title="Portfolio Link"
-                >
-                  <FaLink size={14} />
-                </a>
-                <a
-                  href={member.email}
-                  className="hover:text-white transition-colors"
-                  title="Send Email"
-                >
-                  <FaEnvelope size={15} />
-                </a>
-              </div>
+            {/* Social Icons */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '1.25rem' }}>
+              <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af' }}><FaGithub size={16} /></a>
+              <a href={member.github} target="_blank" rel="noopener noreferrer" style={{ color: '#9ca3af' }}><FaLink size={16} /></a>
+              <a href={member.email} style={{ color: '#9ca3af' }}><FaEnvelope size={16} /></a>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

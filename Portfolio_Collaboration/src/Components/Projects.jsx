@@ -3,110 +3,107 @@ import React from 'react';
 const teamProjects = [
   {
     name: "Barbara Oktoi",
-    githubUrl: "https://github.com/barbaraoktoi", // Replace with actual URL
+    githubUrl: "https://github.com/barbaraoktoi",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      {
-        title: "Project Title One",
-        description: "Short one-line description of the project goes here."
-      },
-      {
-        title: "Project Title Two",
-        description: "Short one-line description of the project goes here."
-      }
+      { title: "Project Title One", description: "Short one-line description of the project goes here." },
+      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
     ]
   },
   {
     name: "Harmon Moindi",
-    githubUrl: "https://github.com/harmonmoindi", // Replace with actual URL
+    githubUrl: "https://github.com/harmonmoindi",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      {
-        title: "Project Title One",
-        description: "Short one-line description of the project goes here."
-      },
-      {
-        title: "Project Title Two",
-        description: "Short one-line description of the project goes here."
-      }
+      { title: "Project Title One", description: "Short one-line description of the project goes here." },
+      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
     ]
   },
   {
     name: "Frank Mwaura",
-    githubUrl: "https://github.com/frankmwaura", // Replace with actual URL
+    githubUrl: "https://github.com/frankmwaura",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      {
-        title: "Project Title One",
-        description: "Short one-line description of the project goes here."
-      },
-      {
-        title: "Project Title Two",
-        description: "Short one-line description of the project goes here."
-      }
+      { title: "Project Title One", description: "Short one-line description of the project goes here." },
+      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
     ]
   },
   {
     name: "Oketch Nathan",
-    githubUrl: "https://github.com/oketchnathan", // Replace with actual URL
+    githubUrl: "https://github.com/oketchnathan",
+    avatarImg: "https://static.vecteezy.com/system/resources/thumbnails/074/527/716/small/minimalist-silhouette-human-user-profile-avatar-placeholder-shape-icon-vector.jpg",
     projects: [
-      {
-        title: "Project Title One",
-        description: "Short one-line description of the project goes here."
-      },
-      {
-        title: "Project Title Two",
-        description: "Short one-line description of the project goes here."
-      }
+      { title: "Project Title One", description: "Short one-line description of the project goes here." },
+      { title: "Project Title Two", description: "Short one-line description of the project goes here." }
     ]
   }
 ];
+
 export default function Projects() {
   return (
-    <section className="min-h-screen bg-[#121212] text-[#e0e0e0] px-8 py-12 font-sans">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="flex items-center gap-3 mb-10">
-          <span className="text-[#f59e0b] font-mono text-sm">02</span>
-          <h1 className="text-3xl font-bold text-white">Projects</h1>
-        </div>
+    <section style={{ marginBottom: '5rem' }}>
+      <h2 style={{ fontSize: '2.2rem', fontWeight: 'bold', marginBottom: '2.5rem', color: '#ffffff' }}>
+        <span style={{ color: '#d97706', marginRight: '0.75rem', fontSize: '1.5rem' }}>02</span>
+        Projects
+      </h2>
 
-        {/* 2-Column Grid for Team Members */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {teamProjects.map((member, index) => (
-            <div key={index} className="flex flex-col gap-6">
-              {/* Member Header */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#333] flex items-center justify-center text-white font-bold text-sm">
-                  {member.name.charAt(0)}
-                </div>
-                <div>
-                  <h3 className="font-bold text-white">{member.name}</h3>
-                  <a
-                    href={member.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#f59e0b] text-xs font-mono hover:underline flex items-center gap-1"
-                  >
-                    Learn more &rarr;
-                  </a>
-                </div>
-              </div>
-              {/* Projects Cards */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem' }}>
+        {teamProjects.map((member, index) => (
+          <div key={index}>
+            {/* Developer Header */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
+             {member.avatarImg ? (
+  <img 
+    src={member.avatarImg} 
+    alt={member.name}
+    style={{
+      width: '32px',
+      height: '32px',
+      borderRadius: '50%',
+      objectFit: 'cover'
+    }}
+  />
+) : (
+  <div style={{
+    width: '32px',
+    height: '32px',
+    borderRadius: '50%',
+    backgroundColor: member.avatarBg || '#333'
+  }} />
+)}
+              <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#ffffff', fontWeight: 'bold' }}>{member.name}</h3>
+              <a href={member.githubUrl} target="_blank" rel="noopener noreferrer" style={{ color: '#d97706', fontSize: '0.85rem', textDecoration: 'none', fontWeight: 'bold' }}>
+                Learn more →
+              </a>
+            </div>
+
+            {/* Projects 2-Column Grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '1.5rem' }}>
               {member.projects.map((project, pIndex) => (
-                <div
-                  key={pIndex}
-                  className="bg-[#1e1e1e] border border-[#2a2a2a] rounded-lg overflow-hidden flex flex-col"
-                >
-                  <div className="h-48 bg-[#252525] flex items-center justify-center text-[#777] font-mono text-xs uppercase tracking-wider">
+                <div key={pIndex} style={{ backgroundColor: '#262626', borderRadius: '12px', padding: '1.25rem', border: '1px solid #333' }}>
+                  {/* Screenshot Placeholder */}
+                  <div style={{
+                    backgroundColor: '#383d48',
+                    borderRadius: '8px',
+                    height: '180px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#9ca3af',
+                    fontSize: '0.75rem',
+                    letterSpacing: '1px',
+                    fontWeight: 'bold',
+                    marginBottom: '1rem'
+                  }}>
                     SCREENSHOT – PROJECT {pIndex + 1}
                   </div>
-                  <div className="p-4 bg-[#181818]">
-                    <h4 className="font-bold text-white text-sm mb-1">{project.title}</h4>
-                    <p className="text-[#888] text-xs">{project.description}</p>
-                  </div>
+                  <h4 style={{ margin: '0 0 0.4rem 0', color: '#ffffff', fontSize: '1rem', fontWeight: 'bold' }}>{project.title}</h4>
+                  <p style={{ margin: 0, color: '#9ca3af', fontSize: '0.85rem', lineHeight: '1.4' }}>{project.description}</p>
                 </div>
               ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );
